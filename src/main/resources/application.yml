@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    generate-ddl: true
+  datasource:
+    url: jdbc:h2:mem:gms_db;MODE=MySQL
+    username: sa
+    h2:
+      console:
+        enabled: true
+    sql:
+      init:
+        mode: always
+    output:
+      ansi:
+        enabled: always
+
+logging:
+  level:
+    root: INFO
